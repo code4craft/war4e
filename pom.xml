@@ -38,7 +38,13 @@
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
-            <version>2.1</version>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.jetty.orbit</groupId>
+            <artifactId>org.apache.jasper.glassfish</artifactId>
+            <version>2.1.0.v201110031002</version>
         </dependency>
 
     </dependencies>
