@@ -3,7 +3,6 @@ package us.codecraft.war4e;
 
 import org.apache.commons.cli.*;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 import java.io.File;
@@ -32,12 +31,9 @@ public class Main {
     }
 
     private static void startJetty() throws Exception {
-        Server server = new Server();
+        Server server = new Server(port);
         WebAppContext webapp = new WebAppContext();
-        ServerConnector serverConnector = new ServerConnector(server);
-        serverConnector.setPort(port);
-        serverConnector.setIdleTimeout(30000);
-        server.addConnector(serverConnector);
+
         webapp.setContextPath("/");
         webapp.setWar(path);
         server.setHandler(webapp);

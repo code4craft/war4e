@@ -11,12 +11,12 @@
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
-            <version>9.0.3.v20130506</version>
+            <version>8.1.9.v20130131</version>
             <artifactId>jetty-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
-            <version>9.0.3.v20130506</version>
+            <version>8.1.9.v20130131</version>
             <artifactId>jetty-webapp</artifactId>
         </dependency>
         <dependency>
@@ -44,6 +44,14 @@
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
